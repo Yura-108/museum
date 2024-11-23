@@ -1,0 +1,23 @@
+.containerSmallCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+
+  .card {
+    width: 416px;
+    height: 130px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .backgroundImage {
+      width: 80px;
+      height: 80px;
+    }
+    .info {
+      align-items: center;
+      width: calc(100% - 96px);
+    }
+  }
+}

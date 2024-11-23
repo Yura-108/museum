@@ -1,0 +1,48 @@
+.info {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+
+  .text {
+    width: calc(100% - 59px);
+    text-align: start;
+  }
+  h4 {
+    width: 80%;
+    color: rgba(57, 57, 57, 1);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  span {
+    color: rgba(224, 164, 73, 1);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+
+  }
+  h6 {
+    margin-top: 12px;
+    color: rgba(57, 57, 57, 1);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
