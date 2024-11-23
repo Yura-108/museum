@@ -1,20 +1,18 @@
 import Card from '../Card/Card.tsx';
 import './ContainerCards.scss';
-import React, { useState } from 'react';
+import React from 'react';
 import { usePaintings } from '../../store/usePaintings.ts';
 
-const ContainerCards: React.FC = () => {
-  const [page] = useState(1);
+interface Props {
+  activePage: number;
+}
 
-  const { data: paintings, isLoading, error } = usePaintings(page, 3, 387);
-
-  // const handlePrevPage = () => {
-  //   setPage((page) => (page > 1 ? page - 1 : page));
-  // };
-  //
-  // const handleNextPage = () => {
-  //   setPage((page) => page + 1);
-  // };
+const ContainerCards: React.FC<Props> = ({ activePage }) => {
+  const {
+    data: paintings,
+    isLoading,
+    error,
+  } = usePaintings(activePage, 3, 387);
 
   if (isLoading) return <p>Loading paintings...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -30,10 +28,6 @@ const ContainerCards: React.FC = () => {
           />
         ))}
       </div>
-      {/*<button onClick={handlePrevPage} disabled={page === 1}>*/}
-      {/*  Previous*/}
-      {/*</button>*/}
-      {/*<button onClick={handleNextPage}>Next</button>*/}
     </>
   );
 };

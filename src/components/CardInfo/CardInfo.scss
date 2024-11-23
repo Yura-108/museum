@@ -18,15 +18,17 @@
     white-space: nowrap;
     overflow: hidden;
   }
-  span {
+  h6 {
     color: rgba(224, 164, 73, 1);
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 26px;
-
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
-  h6 {
+  h5 {
     margin-top: 12px;
     color: rgba(57, 57, 57, 1);
     font-family: "Lexend Deca", sans-serif;

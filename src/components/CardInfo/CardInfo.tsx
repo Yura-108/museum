@@ -12,8 +12,8 @@ const CardInfo: React.FC<CardInfoProps> = ({ title, artist }) => {
     <div className="info">
       <div className="text">
         <h4>{title}</h4>
-        <span>{artist}</span>
-        <h6>Public</h6>
+        <h6>{artist}</h6>
+        <h5>Public</h5>
       </div>
       <div className="favorite">
         <img src={logo} alt="favorite" />
