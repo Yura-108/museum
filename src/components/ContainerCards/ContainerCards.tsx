@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { usePaintings } from '../../store/usePaintings.ts';
 
 const ContainerCards: React.FC = () => {
-  const [page, setPage] = useState(1);
+  const [page] = useState(1);
 
   const { data: paintings, isLoading, error } = usePaintings(page, 3, 387);
 
