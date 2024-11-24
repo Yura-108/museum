@@ -20,7 +20,7 @@ export const usePaintings = (
       return data.map((painting: any) => ({
         id: painting.id,
         title: painting.title,
-        artist: painting.artist_display.split(',')[0].trim(),
+        artist: painting.artist_title,
         imageUrl: `https://www.artic.edu/iiif/2/${painting.image_id}/full/${imageSize},/0/default.jpg`,
       }));
     },
