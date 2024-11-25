@@ -2,7 +2,6 @@
   width: 1280px;
   margin-top: 24px;
 
-
   .pagination {
     float: right;
     user-select: none;
@@ -22,14 +21,14 @@
       color: rgba(57, 57, 57, 1);
       width: 30px;
       height: 30px;
-      font-family: "Lexend Deca", sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
       font-weight: 300;
       font-size: 18px;
       line-height: 24px;
     }
     .active {
       background: rgba(241, 121, 0, 1);
-      font-family: "Lexend Deca", sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
       font-weight: 600;
       font-size: 18px;
       line-height: 23px;

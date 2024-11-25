@@ -6,6 +6,7 @@ import SectionTitle from '../SectionTitle/SectionTitle.tsx';
 import Pagination from '../Pagination/Pagination.tsx';
 import { useQuery } from '@tanstack/react-query';
 import CardContainerSkeleton from '../Skeletons/CardContainerSkeleton.tsx';
+import { MAX_PAGE_PAGINATION } from '../../constants/nums.ts';
 
 interface Props {
   activePage: number;
@@ -22,7 +23,7 @@ const ContainerCards: React.FC<Props> = () => {
   return (
     <>
       <SectionTitle h2={'Our special gallery'} h4={'Topics for you'} />
-      {isPending && <CardContainerSkeleton />}
+      {isPending && <CardContainerSkeleton length={MAX_PAGE_PAGINATION} />}
       {!isPending && (
         <div className="containerCards">
           {data?.map((artwork: any) => (

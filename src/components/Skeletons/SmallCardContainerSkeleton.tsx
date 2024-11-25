@@ -1,6 +1,9 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
-import { SEARCH_ITEMS_LIMIT } from '../../constants/nums.ts';
+
+interface Props {
+  length: number;
+}
 
 const SmallCardSkeleton: React.FC = () => (
   <ContentLoader
@@ -18,10 +21,10 @@ const SmallCardSkeleton: React.FC = () => (
   </ContentLoader>
 );
 
-const SmallCardContainerSkeleton: React.FC = () => {
+const SmallCardContainerSkeleton: React.FC<Props> = ({ length }) => {
   return (
     <div className={'containerSmallCards'}>
-      {Array.from({ length: SEARCH_ITEMS_LIMIT }).map((_, i) => (
+      {Array.from({ length: length }).map((_, i) => (
         <SmallCardSkeleton key={i} />
       ))}
     </div>

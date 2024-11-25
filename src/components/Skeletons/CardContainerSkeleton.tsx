@@ -1,6 +1,9 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
-import { MAX_PAGE_PAGINATION } from '../../constants/nums.ts';
+
+interface Props {
+  length: number;
+}
 
 const CardSkeleton: React.FC = () => (
   <ContentLoader
@@ -18,9 +21,9 @@ const CardSkeleton: React.FC = () => (
   </ContentLoader>
 );
 
-const CardContainerSkeleton: React.FC = () => (
+const CardContainerSkeleton: React.FC<Props> = ({ length }) => (
   <div className={'containerCards'}>
-    {Array.from({ length: MAX_PAGE_PAGINATION }).map((_, i) => (
+    {Array.from({ length: length }).map((_, i) => (
       <CardSkeleton key={i} />
     ))}
   </div>

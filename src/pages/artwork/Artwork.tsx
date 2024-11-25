@@ -1,34 +1,42 @@
 import React from 'react';
 import { Navigate, useLocation, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { getArtWork } from '../../utils/APIFunctions.ts';
-import { IMAGE_URL } from '../../constants/API.ts';
+import { getArtWork } from '@utils/APIFunctions.ts';
+import { IMAGE_URL } from '@constants/API.ts';
 import './Artwork.scss';
+import ArtworkSkeleton from '../../components/Skeletons/ArtworkSkeleton.tsx';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage.tsx';
+import handleImageError from '../../utils/handleImageError.ts';
 
 const Artwork: React.FC = () => {
   const { id } = useParams();
   let { state } = useLocation();
 
   const artworkId = Number(id);
-  if (!artworkId || isNaN(artworkId)) {
+  if (!id || isNaN(artworkId)) {
     return <Navigate to={'/404'} replace />;
   }
   let artwork;
 
   if (!state) {
-    const { data, isError } = useQuery({
+    const { data, isError, isPending, error } = useQuery({
       queryKey: ['artwork', artworkId],
       queryFn: () => getArtWork(artworkId),
     });
-    if (isError) return <h2>Artwork search error</h2>;
+
+    if (isError) return <ErrorMessage>{error.message}</ErrorMessage>;
+    if (isPending) return <ArtworkSkeleton />;
     artwork = data;
   } else {
     artwork = state;
   }
-  console.log(artwork);
   return (
     <div className={'artwork'}>
-      <img src={IMAGE_URL(artwork.image_id)} alt="" />
+      <img
+        src={IMAGE_URL(artwork.image_id)}
+        onError={handleImageError}
+        alt=""
+      />
       <div className="text">
         <div className="title">
           <h2>{artwork.title}</h2>

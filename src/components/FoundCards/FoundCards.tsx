@@ -17,7 +17,8 @@ const FoundCards: React.FC<Props> = ({ debouncedQuery }) => {
     queryKey: ['search', debouncedQuery],
     queryFn: () => getSearch({ q: debouncedQuery, size: SEARCH_ITEMS_LIMIT }),
   });
-  if (isPending) return <SmallCardContainerSkeleton />;
+  if (isPending)
+    return <SmallCardContainerSkeleton length={SEARCH_ITEMS_LIMIT} />;
   if (data?.length === 0) return <Message>Nothing was found!</Message>;
 
   return <ContainerSmallCard data={data} />;

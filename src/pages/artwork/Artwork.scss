@@ -6,52 +6,52 @@
     width: 497px;
     height: 570px;
   }
- .text {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   text-align: start;
-   padding: 0 6%;
-   h2 {
-     color: rgba(57, 57, 57, 1);
-     font-family: "Lexend Deca", sans-serif;
-     font-weight: 400;
-     font-size: 32px;
-     line-height: 40px;
-     margin-bottom: 32px;
-   }
-   h4 {
-     color: rgba(224, 164, 73, 1);
-     font-family: "Lexend Deca", sans-serif;
-     font-weight: 400;
-     font-size: 24px;
-     line-height: 30px;
-     margin-bottom: 16px;
-   }
-   h5 {
-     color: rgba(57, 57, 57, 1);
-     font-family: "Lexend Deca", sans-serif;
-     font-weight: 700;
-     font-size: 16px;
-     line-height: 20px;
-   }
-   h6 {
-     color: rgba(224, 164, 73, 1);
-     font-family: "Lexend Deca", sans-serif;
-     font-weight: 400;
-     font-size: 16px;
-     line-height: 20px;
-     margin-top: 16px;
-   }
-   span {
-     color: rgba(57, 57, 57, 1);
-   }
-   .on_loan_display {
-     color: rgba(57, 57, 57, 1);
-     font-family: "Lexend Deca", sans-serif;
-     font-weight: 400;
-     font-size: 16px;
-     line-height: 20px;
-   }
- }
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    padding: 0 6%;
+    h2 {
+      color: rgba(57, 57, 57, 1);
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 32px;
+    }
+    h4 {
+      color: rgba(224, 164, 73, 1);
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 16px;
+    }
+    h5 {
+      color: rgba(57, 57, 57, 1);
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    h6 {
+      color: rgba(224, 164, 73, 1);
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 16px;
+    }
+    span {
+      color: rgba(57, 57, 57, 1);
+    }
+    .on_loan_display {
+      color: rgba(57, 57, 57, 1);
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import './ContainerSmallCard.scss';
 
 interface Props {
-  data: Array<object> | undefined;
+  data: Array<any> | undefined;
 }
 
 const ContainerSmallCards: React.FC<Props> = ({ data }) => {

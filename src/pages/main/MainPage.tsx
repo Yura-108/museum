@@ -1,10 +1,9 @@
 import React from 'react';
-import Title from '../../components/Title/Title.tsx';
-import Search from '../../components/Search/Search.tsx';
-import SectionTitle from '../../components/SectionTitle/SectionTitle.tsx';
-// @ts-ignore
-import ContainerCards from '@components/ContainerCards/ContainerCards.tsx';
 import './MainPage.scss';
+import Title from '@components/Title/Title.tsx';
+import Search from '@components/Search/Search.tsx';
+import ContainerCards from '@components/ContainerCards/ContainerCards.tsx';
+import RandomGallery from '@components/FandomGallery/RandomGallery.tsx';
 
 const MainPage: React.FC = () => {
   return (
@@ -12,8 +11,7 @@ const MainPage: React.FC = () => {
       <Title />
       <Search />
       <ContainerCards />
-      <SectionTitle h2={'Other works for you'} h4={'Here some more'} />
-      {/*<ContainerSmallCard />*/}
+      <RandomGallery />
     </section>
   );
 };
