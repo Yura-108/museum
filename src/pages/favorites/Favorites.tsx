@@ -1,7 +1,7 @@
 import React from 'react';
 import './Favorites.scss';
 import { useFavoritesContext } from '../../store/FavoritesContext.tsx';
-import { getArtWorks, getPage } from '../../utils/APIFunctions.ts';
+import { getArtWorks } from '../../utils/APIFunctions.ts';
 import ContainerSmallCards from '../../components/ContainerSmallCards/ContainerSmallCard.tsx';
 import { useQuery } from '@tanstack/react-query';
 import SmallCardContainerSkeleton from '../../components/Skeletons/SmallCardContainerSkeleton.tsx';
