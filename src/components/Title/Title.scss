@@ -5,7 +5,14 @@ h1 {
   line-height: 80px;
   text-transform: capitalize;
   color: rgba(57, 57, 57, 1);
-
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin-left: 20px;
+    }
+  }
   span {
     color: rgba(241, 121, 0, 1);
   }

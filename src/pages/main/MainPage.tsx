@@ -8,7 +8,7 @@ import RandomGallery from '@components/FandomGallery/RandomGallery.tsx';
 const MainPage: React.FC = () => {
   return (
     <section id={'main'}>
-      <Title />
+      <Title>let's find some <span>art</span> <br /> here!</Title>
       <Search />
       <ContainerCards />
       <RandomGallery />
