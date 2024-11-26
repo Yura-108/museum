@@ -12,4 +12,9 @@ footer {
     justify-content: space-between;
     align-items: center;
   }
+  @media (max-width: 768px) {
+    img {
+      transform: scale(0.8);
+    }
+  }
 }
