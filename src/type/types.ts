@@ -1,1 +1,1 @@
-export type SortMethod = "title" | "artist" | "date";
+export type SortMethod = 'title' | 'artist' | 'date';

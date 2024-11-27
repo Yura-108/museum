@@ -18,13 +18,12 @@
 
     .info {
       align-items: center;
-      width: calc(100% - 96px); // Учитывая отступы
+      width: calc(100% - 96px);
     }
   }
 
-  // Для экранов шириной до 1024px (планшеты)
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr); // 2 колонки
+  @media (max-width: 1280px) {
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
 
     .card {
@@ -36,26 +35,17 @@
     }
   }
 
-  // Для экранов шириной до 768px (смартфоны в горизонтальной ориентации)
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
 
     .card {
-      //max-width: 100%; // Занимает всю ширину
-      flex-direction: column; // Расположить элементы вертикально
-      align-items: flex-start;
       max-height: 170px;
       padding: 0;
-
-
       .backgroundImage {
-        width: 60px;
-        height: 60px;
+        width: 78px;
+        height: 78px;
       }
-
       .info {
-        width: 100%; // Занимает всю ширину
-        margin-top: 8px; // Отступ между изображением и информацией
         h5 {
           margin: 0;
         }

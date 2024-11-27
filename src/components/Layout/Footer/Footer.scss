@@ -12,6 +12,12 @@ footer {
     justify-content: space-between;
     align-items: center;
   }
+  @media (max-width: 1280px) {
+    margin-top: 60px;
+    .container {
+      justify-content: space-around;
+    }
+  }
   @media (max-width: 768px) {
     img {
       transform: scale(0.8);

@@ -1,6 +1,7 @@
 import './Pagination.scss';
 import React, { useState } from 'react';
 import CombinedShape from '@images/CombinedShape.svg';
+import { getNumberOfTotalPages } from '@utils/APIFunctions.ts';
 
 interface PaginationProps {
   activePage: number;
@@ -12,6 +13,7 @@ const Pagination: React.FC<PaginationProps> = ({
   setActivePage,
 }) => {
   const totalPages = 20;
+  //console.log(getNumberOfTotalPages({limit: 20}).then(res => console.log(res)));
   const pagesPerView = 4;
   const [currentRangeStart, setCurrentRangeStart] = useState(0);
 

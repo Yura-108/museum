@@ -17,21 +17,20 @@ interface Props {
 }
 
 const ContainerCards: React.FC<Props> = () => {
-
   const [activePage, setActivePage] = useState<number>(0);
-  const [sortMethod, setSortMethod] = useState<SortMethod>("title");
+  const [sortMethod, setSortMethod] = useState<SortMethod>('title');
 
   const { data, isPending } = useQuery({
     queryKey: ['page', activePage],
     queryFn: () => getPage({ page: activePage }),
-    select: (data) => sortArtwork(data, sortMethod)
+    select: (data) => sortArtwork(data, sortMethod),
   });
 
   return (
     <>
       <SectionTitle h2={'Our special gallery'} h4={'Topics for you'} />
-      {isPending && <CardContainerSkeleton length={MAX_PAGE_PAGINATION} />}
       <Sorting setSortMethod={setSortMethod} />
+      {isPending && <CardContainerSkeleton length={MAX_PAGE_PAGINATION} />}
       {!isPending && (
         <div className="containerCards">
           {data.map((artwork: any) => (

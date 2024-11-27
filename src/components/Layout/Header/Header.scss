@@ -11,7 +11,7 @@ header {
   align-items: center;
   justify-content: center;
   margin-bottom: 120px;
-
+  position: relative;
   .container {
     width: 1280px;
     height: 63px;
@@ -25,7 +25,12 @@ header {
         height: 100%;
       }
     }
-    .favorites {
+    .burgerButton {
+      width: 32px;
+      display: none;
+      user-select: none;
+    }
+    .burgerMenu {
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -36,6 +41,36 @@ header {
         line-height: 21.78px;
         color: #fff;
         margin-left: 4px;
+      }
+    }
+  }
+  @media (max-width: 1280px) {
+    .container {
+      justify-content: space-around;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      .burgerButton {
+        display: block;
+      }
+      .burgerMenu {
+        display: none;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        background: linear-gradient(
+                        90deg,
+                        #343333 38.05%,
+                        #484848 69.22%,
+                        #282828 98.98%
+        );
+        padding: 20px;
+        &.open {
+          display: flex;
+        }
       }
     }
   }

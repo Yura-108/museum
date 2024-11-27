@@ -12,6 +12,7 @@
     color: rgba(57, 57, 57, 1);
   }
   select {
+    background: transparent;
     outline: none;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
@@ -20,5 +21,8 @@
     color: rgba(57, 57, 57, 1);
     padding: 5px;
     margin-left: 5px;
+  }
+  @media (max-width: 1280px) {
+    justify-content: center;
   }
 }

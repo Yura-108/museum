@@ -7,6 +7,7 @@ interface Props {
 
 const SmallCardSkeleton: React.FC = () => (
   <ContentLoader
+    className={'SkeletonSmallCard'}
     speed={1}
     width={416}
     height={130}
